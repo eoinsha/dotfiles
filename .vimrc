@@ -1,7 +1,6 @@
 set nocompatible
 filetype off    " Required
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 set rtp+=~/.vim/bundle/vundle/
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
 
@@ -32,6 +31,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'wikimatze/hammer.vim'
 Plugin 'hashivim/vim-terraform'
 Plugin 'tpope/vim-unimpaired.git'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git'
 
