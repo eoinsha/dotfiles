@@ -1,0 +1,20 @@
+[color]
+	        ui = true
+[alias]
+	        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+		lgg  = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+		lgg2 = log --graph --all --format=format:'%C(red)%h%C(reset) - %C(bold cyan)%cD%C(reset) %C(green)(%cr)%C(reset)%C(yellow)%d%C(reset)%n''          %C(reset)%s%C(reset) %C(bold blue)— %cn%C(reset)' --abbrev-commit
+[push]
+  default = current
+[mergetool]
+	keepBackup = false
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[rerere]
+	enabled = true
+[include]
+  path = .gitconfig.private
+
+
