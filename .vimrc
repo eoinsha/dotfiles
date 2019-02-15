@@ -32,7 +32,11 @@ Plugin 'wikimatze/hammer.vim'
 Plugin 'hashivim/vim-terraform'
 Plugin 'tpope/vim-unimpaired.git'
 Plugin 'ctrlpvim/ctrlp.vim'
+Bundle 'tpope/vim-abolish'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
+let vim_markdown_preview_toggle=1
+let vim_markdown_preview_hotkey='<C-m>'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git'
 
 " Some settings to enable the theme:
@@ -60,9 +64,9 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ignore_files=['/node_modules/', '\m\c.html$']
-" let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_javascript_checkers=['standard']
-let g:syntastic_javascript_standard_exec = 'spacey-standard'
+let g:syntastic_javascript_checkers=['eslint']
+"let g:syntastic_javascript_checkers=['standard']
+"let g:syntastic_javascript_standard_exec = 'spacey-standard'
 " Pretend Java checker is loaded to prevent it from loading!
 let g:loaded_syntastic_java_javac_checker = 1
 
