@@ -1,16 +1,14 @@
 set nocompatible
 filetype off    " Required
 
-set rtp+=~/.vim/bundle/vundle/
-" set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
-
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " python from powerline.vim import setup as powerline_setup
 " python powerline_setup()
 " python del powerline_setup
 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'scrooloose/syntastic'
@@ -35,6 +33,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Bundle 'tpope/vim-abolish'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'prettier/vim-prettier'
+call vundle#end()
 
 let vim_markdown_preview_toggle=1
 let vim_markdown_preview_hotkey='<C-m>'
