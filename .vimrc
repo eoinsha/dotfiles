@@ -11,7 +11,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Plugin 'isRuslan/vim-es6'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -19,7 +18,6 @@ Bundle 'will133/vim-dirdiff'
 Bundle 'gorodinskiy/vim-coloresque.git'
 Plugin 'elzr/vim-json'
 Plugin 'jimmyhchan/dustjs.vim'
-Plugin 'cakebaker/scss-syntax.vim'
 Bundle 'elixir-lang/vim-elixir.git'
 Plugin 'rizzatti/dash.vim'
 Plugin 'jlanzarotta/bufexplorer'
@@ -33,6 +31,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Bundle 'tpope/vim-abolish'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'prettier/vim-prettier'
+Plugin 'pedrohdz/vim-yaml-folds'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'dense-analysis/ale'
 call vundle#end()
 
 let vim_markdown_preview_toggle=1
@@ -66,12 +67,16 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ignore_files=['/node_modules/', '\m\c.html$']
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_python_checkers=['flake8']
+let g:syntastic_javascript_checkers=['$(npm bin)/eslint']
+let g:syntastic_mode_map = { 'passive_filetypes': ['python', 'asciidoc'] }
+
+"let g:syntastic_python_checkers=['flake8']
 "let g:syntastic_javascript_checkers=['standard']
 "let g:syntastic_javascript_standard_exec = 'spacey-standard'
 " Pretend Java checker is loaded to prevent it from loading!
 let g:loaded_syntastic_java_javac_checker = 1
+let g:tsuquyomi_disable_quickfix = 1
+" let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -89,4 +94,3 @@ nnoremap <Leader>b :BufExplorer<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 set wildignore+=node_modules/**,**/node_modules/**
-

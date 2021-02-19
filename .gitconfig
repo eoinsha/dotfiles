@@ -16,5 +16,3 @@
 	enabled = true
 [include]
   path = .gitconfig.private
-
-
